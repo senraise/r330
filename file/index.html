@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>文件处理 - S1 - 操作说明书</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u6587\u4ef6\u5904\u7406";
+    var mkdocs_page_input_path = "file.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> S1 - 操作说明书</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../appearance_introduction/">外观介绍</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../distribution_of_display_area/">显示区分布</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../network_configuration_steps/">网络配置步骤</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../volume_control/">音量控制</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../interface_switching/">界面切换</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../terminal_transaction_process_b2c/">终端交易流程（B扫C）</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../terminal_transaction_process_c2b/">终端交易流程（C扫B）</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../voice_broadcast/">语音播报</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../transaction_query/">交易查询</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">关于本站</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">S1 - 操作说明书</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>文件处理</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">文件处理</h1>
+<p>python 对于文件的处理在我的工作当中会经常用到, 而且应用生活中有很大的用途, 今天我们讲对于文件的读写, 和一些容易碰到的错误。</p>
+<h1 id="_2">读文件</h1>
+<p>open 函数</p>
+<pre><code>可以利用open函数创建一个file对象,调用file的相关方法进行文件的基础操作。
+
+Help on built-in function open in module __builtin__:
+
+open(...)
+    open(name[, mode[, buffering]]) -&gt; file object
+
+    Open a file using the file() type, returns a file object.  This is the
+    preferred way to open a file.  See file.__doc__ for further information.
+(END)
+
+上面是通过help函数得到关于open函数的描述。
+
+name: 需要访问的文件名(可以指定相对和绝对地址)
+mode: 文件的读取模式(读, 写, 追加等。)
+buffering: 文件的寄存区(可以后续了解)
+
+读取文件
+
+test.txt内容如下
+hello world
+i am a boy
+i am very happy
+
+f = open('test.txt', 'r')
+data = f.read()
+f.close()
+
+print (data)
+
+
+</code></pre>
+
+<h1 id="open">open 无参数 用法</h1>
+<pre><code>f = open('a.txt')
+</code></pre>
+
+<p>打开一个文件,a.txt 必须存在，文件不存在的下面write再讲解。</p>
+<h1 id="read">read</h1>
+<pre><code>content = f.read()
+</code></pre>
+
+<p>读出所有的内容</p>
+<p>现在内容都在content里面了。再调用read() 就没有内容了。</p>
+<h1 id="readlines">readlines</h1>
+<pre><code>f = open(&quot;a.txt&quot;)
+lines = f.readlines()
+for i in lines：
+  print(i)
+</code></pre>
+
+<p>lines 格式是列表，每一行是一个列表成员。</p>
+<h1 id="write">write</h1>
+<pre><code>f = open(&quot;a.txt&quot;,&quot;w&quot;)
+f.write(&quot;hello&quot;)
+f.close()
+</code></pre>
+
+<p>写完了，必须关闭。一般调用关闭才能保存</p>
+<p>open 第一个参数是 文件名称，第二个是"w",
+* 表示可以写，
+* 并且如果文件不存在会建立文件
+* 如果文件存在，会覆盖老文件</p>
+<p>如果要是打开可读写，不覆盖。 用"r+"参数</p>
+<pre><code>f = open(&quot;a.txt&quot;,&quot;r+&quot;)
+f.write(&quot;world&quot;)
+f.close()
+</code></pre>
+
+<h1 id="close">close</h1>
+<p>文件打开了，要是读写了。必须关闭</p>
+<pre><code>f.close()
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

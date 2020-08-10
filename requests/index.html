@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>requests - S1 - 操作说明书</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "requests";
+    var mkdocs_page_input_path = "requests.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> S1 - 操作说明书</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../appearance_introduction/">外观介绍</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../distribution_of_display_area/">显示区分布</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../network_configuration_steps/">网络配置步骤</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../volume_control/">音量控制</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../interface_switching/">界面切换</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../terminal_transaction_process_b2c/">终端交易流程（B扫C）</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../terminal_transaction_process_c2b/">终端交易流程（C扫B）</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../voice_broadcast/">语音播报</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../transaction_query/">交易查询</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">关于本站</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">S1 - 操作说明书</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>requests</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="requests">requests</h1>
+<blockquote>
+<p>requests 是我使用的python库里面最棒的http client库。</p>
+</blockquote>
+<h2 id="_1">安装</h2>
+<pre><code>$ pipenv install requests
+</code></pre>
+
+<h2 id="_2">源代码</h2>
+<pre><code>https://github.com/requests/requests
+</code></pre>
+
+<h2 id="_3">文档</h2>
+<blockquote>
+<p>http://docs.python-requests.org/</p>
+</blockquote>
+<p>本文档选择写requests主要是 ，requests太好用了。我要整理出来，如果能用golang实现一个类似的，那就实现了我的梦想。</p>
+<h2 id="_4">开始使用</h2>
+<p><code>get</code></p>
+<pre><code>import requests
+resp = requests.get(&quot;http://cpython.org&quot;)
+print(resp.content)
+</code></pre>
+
+<p>这里<code>resp</code> 是从 http 网络的返回 的response ， content就是网页内容。</p>
+<p><code>post</code></p>
+<p>你可以可以发送一个post请求，一般post请求都要上传一些参数（数据），例子如下。来自官网文档。
+因为我也没有合适的例子。</p>
+<pre><code> resp = requests.post('http://httpbin.org/post', data = {'key':'value'})
+</code></pre>
+
+<p><code>其他请求</code></p>
+<p>HTTP 请求类型：PUT，DELETE，HEAD 以及 OPTIONS,例子来自官方文档。</p>
+<pre><code>&gt;&gt;&gt; r = requests.put('http://httpbin.org/put', data = {'key':'value'})
+&gt;&gt;&gt; r = requests.delete('http://httpbin.org/delete')
+&gt;&gt;&gt; r = requests.head('http://httpbin.org/get')
+&gt;&gt;&gt; r = requests.options('http://httpbin.org/get')
+
+</code></pre>
+
+<h2 id="url">URL 参数</h2>
+<p>通常情况，你看到的网址 http://httpbin.org/get?key2=value2&amp;key1=value1</p>
+<p>get请求带参数的 <code>URL</code> 例子：</p>
+<pre><code>&gt;&gt;&gt; payload = {'key1': 'value1', 'key2': ['value2', 'value3']}
+
+&gt;&gt;&gt; r = requests.get('http://httpbin.org/get', params=payload)
+&gt;&gt;&gt; print(r.url)
+http://httpbin.org/get?key1=value1&amp;key2=value2&amp;key2=value3
+</code></pre>
+
+<h1 id="_5">查看返回结果</h1>
+<pre><code>In [5]: import requests
+
+In [6]: r = requests.get('http://cpython.org')
+
+In [7]: r.text
+Out[7]: u'&lt;!DOCTYPE html&gt;\n&lt;!--[if IE 8]&gt;&lt;html c................
+</code></pre>
+
+<p>r.status_code 表示返回状态，例如：200, 404,500 等</p>
+<h1 id="json">JSON 数据格式</h1>
+<pre><code>&gt;&gt;&gt; import requests
+
+&gt;&gt;&gt; r = requests.get('https://api.github.com/events')
+&gt;&gt;&gt; r.json()
+[{u'repository': {u'open_issues': 0, u'url': 'https://github.com/...
+</code></pre>
+
+<h2 id="_6">自定义请求头</h2>
+<pre><code>&gt;&gt;&gt; url = 'http://www.jeapedu.com'
+&gt;&gt;&gt; headers = {'user-agent': 'my-app/0.0.1'}
+
+&gt;&gt;&gt; r = requests.get(url, headers=headers)
+</code></pre>
+
+<h2 id="post-multipart-encoded">POST Multipart-Encoded 文件</h2>
+<pre><code>&gt;&gt;&gt; url = 'http://httpbin.org/post'
+&gt;&gt;&gt; files = {'file': open('report.xls', 'rb')}
+
+&gt;&gt;&gt; r = requests.post(url, files=files)
+&gt;&gt;&gt; r.text
+{
+  ...
+  &quot;files&quot;: {
+    &quot;file&quot;: &quot;&lt;censored...binary...data&gt;&quot;
+  },
+  ...
+}
+</code></pre>
+
+<h2 id="cookies">Cookies</h2>
+<p><code>获取返回的cookies</code></p>
+<pre><code>&gt;&gt;&gt; url = 'http://example.com/some/cookie/setting/url'
+&gt;&gt;&gt; r = requests.get(url)
+
+&gt;&gt;&gt; r.cookies['example_cookie_name']
+'example_cookie_value'
+</code></pre>
+
+<p><code>设置一个cookies 项</code></p>
+<pre><code>&gt;&gt;&gt; url = 'http://httpbin.org/cookies'
+&gt;&gt;&gt; cookies = dict(cookies_are='working')
+
+&gt;&gt;&gt; r = requests.get(url, cookies=cookies)
+&gt;&gt;&gt; r.text
+'{&quot;cookies&quot;: {&quot;cookies_are&quot;: &quot;working&quot;}}'
+</code></pre>
+
+<p><code>CookieJar</code></p>
+<pre><code>&gt;&gt;&gt; jar = requests.cookies.RequestsCookieJar()
+&gt;&gt;&gt; jar.set('tasty_cookie', 'yum', domain='httpbin.org', path='/cookies')
+&gt;&gt;&gt; jar.set('gross_cookie', 'blech', domain='httpbin.org', path='/elsewhere')
+&gt;&gt;&gt; url = 'http://httpbin.org/cookies'
+&gt;&gt;&gt; r = requests.get(url, cookies=jar)
+&gt;&gt;&gt; r.text
+'{&quot;cookies&quot;: {&quot;tasty_cookie&quot;: &quot;yum&quot;}}'
+</code></pre>
+
+<p>上面的文档来自 requests doc的入门部分。
+另外：我还写了requests<a href="http://www.cpython.org/requests_notes/index.html">源代码注释</a> 主要是分析requests的源代码。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
