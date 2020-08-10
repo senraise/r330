@@ -1,0 +1,2 @@
+/root/s1-docs-github/S1UserManual/
+mkdocs gh-deploy

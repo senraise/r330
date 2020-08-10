@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>函数 - S1 - 操作说明书</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u51fd\u6570";
+    var mkdocs_page_input_path = "functions.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> S1 - 操作说明书</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../appearance_introduction/">外观介绍</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../distribution_of_display_area/">显示区分布</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../network_configuration_steps/">网络配置步骤</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../volume_control/">音量控制</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../interface_switching/">界面切换</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../terminal_transaction_process_b2c/">终端交易流程（B扫C）</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../terminal_transaction_process_c2b/">终端交易流程（C扫B）</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../voice_broadcast/">语音播报</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../transaction_query/">交易查询</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">关于本站</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">S1 - 操作说明书</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>函数</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">函数</h1>
+<blockquote>
+<p>定义和使用</p>
+</blockquote>
+<pre><code>&quot;&quot;&quot; 定义一个新函数 &quot;&quot;&quot;
+
+def display (s):
+    print(&quot;*&quot; * 5)
+    print(s)
+    print(&quot;-&quot; * 5)
+
+
+&quot;&quot;&quot; 调用函数 &quot;&quot;&quot;
+
+display (&quot;hello&quot;)
+
+display (&quot;cpython&quot;)
+</code></pre>
+
+<p>代码中定义了一个函数display ,括号里面的 s,是参数</p>
+<p>下面用了2个调用的例子， 第一个例子传递了参数 "hello"
+执行的时候 执行的时候 hello会被传到 print(s) 里面替换 s</p>
+<h2 id="_2">执行结果</h2>
+<blockquote>
+<p>display("hello")</p>
+</blockquote>
+<pre><code>*****
+hello
+-----
+
+</code></pre>
+
+<blockquote>
+<p>display("cpython") 执行的结果</p>
+</blockquote>
+<pre><code>*****
+cpython
+-----
+</code></pre>
+
+<h2 id="_3">默认参数的例子</h2>
+<pre><code>&quot;&quot;&quot; 默认参数 &quot;&quot;&quot;
+
+def port (p=8080):
+    print(&quot;port = %d&quot; % p)
+
+
+port()
+
+port(80)
+</code></pre>
+
+<p>当函数使用了默认参数时，调用的时候可以传递参数，也可以不传参数
+上面分别写了2个例子。</p>
+<h2 id="_4">更多参数例子</h2>
+<pre><code>def host(ip,port=8080):
+    print(&quot;IP is %s:%d&quot; % (ip,port))
+
+host(&quot;127.0.0.1&quot;)
+
+host(&quot;127.0.0.1&quot;,80)
+</code></pre>
+
+<p>当函数有2个参数时，第一个参数ip没有默认参数，</p>
+<p>每次调用的时候就至少要传递一个参数。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

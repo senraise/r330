@@ -1,0 +1,13 @@
+site_name: S1 - 操作说明书
+pages:
+    - 外观介绍: appearance_introduction.md
+    - 显示区分布: distribution_of_display_area.md
+    - 网络配置步骤: network_configuration_steps.md
+    - 音量控制: volume_control.md
+    - 界面切换: interface_switching.md
+    - 终端交易流程（B扫C）: terminal_transaction_process_b2c.md
+    - 终端交易流程（C扫B）: terminal_transaction_process_c2b.md
+    - 语音播报: voice_broadcast.md
+    - 交易查询: transaction_query.md
+    - 关于本站: index.md    
+theme: readthedocs

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>类 - S1 - 操作说明书</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u7c7b";
+    var mkdocs_page_input_path = "class.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> S1 - 操作说明书</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../appearance_introduction/">外观介绍</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../distribution_of_display_area/">显示区分布</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../network_configuration_steps/">网络配置步骤</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../volume_control/">音量控制</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../interface_switching/">界面切换</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../terminal_transaction_process_b2c/">终端交易流程（B扫C）</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../terminal_transaction_process_c2b/">终端交易流程（C扫B）</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../voice_broadcast/">语音播报</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../transaction_query/">交易查询</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">关于本站</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">S1 - 操作说明书</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>类</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">类</h1>
+<p>我对类的理解就是 程序化的包装，让代码变的规范化，流程化。
+更好使用。</p>
+<h2 id="_2">定义一个类</h2>
+<pre><code>class CPython:
+    &quot;&quot;&quot; 简单的类实例 &quot;&quot;&quot;
+    n = &quot;demo&quot;
+
+    def get_name(self):
+        return &quot;CPython&quot;
+
+</code></pre>
+
+<p>上面例子定义了一个类，类里有一个变量 n，和一个函数 get_name
+这些都是例子，可以没有。</p>
+<pre><code>class test:
+  pass
+</code></pre>
+
+<p>什么都没有的类。</p>
+<p>继续讲CPython类。</p>
+<h2 id="_3">调用</h2>
+<pre><code>a = CPython()
+
+print(a.n)
+
+print(a.get_name())
+</code></pre>
+
+<p>这里的a 叫做CPython类的实例。</p>
+<h2 id="_4">继续定一个 带初始化函数的类</h2>
+<pre><code>class CPython1:
+    &quot;&quot;&quot; 简单的类实例 &quot;&quot;&quot;
+    n = &quot;demo&quot;
+
+    def __init__(self):
+        self.data = ['1',2,3,&quot;456&quot;]
+
+    def get_name(self):
+        return &quot;CPython&quot;
+
+    def set_name(self,name):
+        self.name = name
+
+
+b = CPython1()
+
+print(b.data)
+
+b.set_name(&quot;cpython1&quot;)
+print(b.name)
+
+</code></pre>
+
+<p>例子中 <strong>init</strong> 是在 b = CPython1()的时候调用的。</p>
+<p>set_name 是另一个函数，调用它可以设置变量name。这里都是例子。</p>
+<h2 id="_5">下一个初始化函数带参数</h2>
+<pre><code>&quot;&quot;&quot;带参数的初始化&quot;&quot;&quot;
+class CPython2:
+    &quot;&quot;&quot; 简单的类实例 &quot;&quot;&quot;
+    n = &quot;demo&quot;
+
+    def __init__(self,name):
+        self.data = ['1',2,3,&quot;456&quot;]
+        self.name = name
+
+    def get_name(self):
+        return self.name
+
+    def set_name(self,name):
+        self.name = name
+
+c = CPython2(&quot;cpython2&quot;)
+
+print(c.get_name())
+
+c.set_name(&quot;2cpython&quot;)
+
+print(c.get_name())
+</code></pre>
+
+<p>通过参数设置name，通过set_name修改了name。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>字典 dict - S1 - 操作说明书</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u5b57\u5178 dict";
+    var mkdocs_page_input_path = "dict.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> S1 - 操作说明书</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../appearance_introduction/">外观介绍</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../distribution_of_display_area/">显示区分布</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../network_configuration_steps/">网络配置步骤</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../volume_control/">音量控制</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../interface_switching/">界面切换</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../terminal_transaction_process_b2c/">终端交易流程（B扫C）</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../terminal_transaction_process_c2b/">终端交易流程（C扫B）</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../voice_broadcast/">语音播报</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../transaction_query/">交易查询</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">关于本站</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">S1 - 操作说明书</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>字典 dict</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="dict">字典 dict</h1>
+<pre><code>In [8]: d={}
+
+In [9]: d['a'] =1
+
+In [10]: d['b'] =3
+
+In [11]: print(d)
+{'a': 1, 'b': 3}
+</code></pre>
+
+<p>定义了一个字典 d， 给字典添加一项，key为"a",value为1</p>
+<p>再添加一项 key为“b”，value 为3</p>
+<h2 id="keys">获取所有的keys</h2>
+<pre><code>d.keys()
+</code></pre>
+
+<p>结果为一个列表。</p>
+<blockquote>
+<p>参考一下代码</p>
+</blockquote>
+<pre><code>d = {}
+
+
+d['a']    = 1
+d['b']    = &quot;hello&quot;
+d['name'] = &quot;Jike&quot;
+d['age']  = 21
+
+
+&quot;&quot;&quot; 第二段 &quot;&quot;&quot;
+
+for k in d.keys():
+    &quot;&quot;&quot; key &quot;&quot;&quot;
+    print (k),
+    &quot;&quot;&quot; value &quot;&quot;&quot;
+    print (d[k])
+</code></pre>
+
+<h2 id="_1">结果</h2>
+<pre><code>a 1
+age 21
+b hello
+name Jike
+</code></pre>
+
+<h2 id="_2">追加和删除</h2>
+<pre><code>b = {'g':[1,2,3],'a':2}
+
+&quot;&quot;&quot; 这个有追加效果,相同的key会被覆盖掉 &quot;&quot;&quot;
+d.update(b)
+
+print(d)
+
+
+del d['b']
+</code></pre>
+
+<p>d update 了b之后，的就是 之前的内容加上后来b的内容，结果自己做一下实验看看</p>
+<p>这里删除 是删除了  key ‘b’，而不是 {'g':[1,2,3],'a':2}</p>
+<p>key 为b的内容 “hello”</p>
+<p>最后结果如下：</p>
+<pre><code>{'a': 2, 'name': 'Jike', 'g': [1, 2, 3], 'age': 21}
+</code></pre>
+
+<p>字典支持 同时获取 k和v的方法</p>
+<pre><code>for k,v in d.items():
+    print (k,v)
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

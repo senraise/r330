@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>if - S1 - 操作说明书</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "if";
+    var mkdocs_page_input_path = "if.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> S1 - 操作说明书</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../appearance_introduction/">外观介绍</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../distribution_of_display_area/">显示区分布</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../network_configuration_steps/">网络配置步骤</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../volume_control/">音量控制</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../interface_switching/">界面切换</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../terminal_transaction_process_b2c/">终端交易流程（B扫C）</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../terminal_transaction_process_c2b/">终端交易流程（C扫B）</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../voice_broadcast/">语音播报</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../transaction_query/">交易查询</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">关于本站</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">S1 - 操作说明书</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>if</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="if">if</h1>
+<p>判断语句，常见的会和else 一起用。</p>
+<h3 id="1">例子1，判断调试是否成立，成立时打印</h3>
+<pre><code>a = 5
+if a &gt; 1:
+   print(a)
+</code></pre>
+
+<p>结果大家知道肯定是打印。</p>
+<h3 id="_1">接下来讲缩进的语法块</h3>
+<pre><code>a = 5
+if a &gt; 1:
+   b = a
+   print(b)
+
+c = b
+</code></pre>
+
+<h2 id="_2">结果</h2>
+<pre><code>5
+</code></pre>
+
+<p>上面的语句，中 b=a 和 print（b） 是根据if 条件成立的时候执行的，</p>
+<p>而c=b 和if条件无关。</p>
+<p>if条件语句 当条件成立后， 所有缩进的语句都会执行，直到 非缩进语句出现。</p>
+<h3 id="_3">接下看一个例子</h3>
+<pre><code>#coding:utf-8
+
+a = 5
+
+if a &gt; 6:
+   b = a
+   print(b)
+
+c = b
+
+</code></pre>
+
+<h1 id="_4">结果如何</h1>
+<pre><code>Traceback (most recent call last):
+  File &quot;examples/if.py&quot;, line 9, in &lt;module&gt;
+    c = b
+NameError: name 'b' is not defined
+</code></pre>
+
+<h2 id="_5">为什么？错了！</h2>
+<p>提示b不存在，b为什么不存在？因为 a &gt; 6不成立， 所以没有执行b=a</p>
+<p>所以b不存在。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
