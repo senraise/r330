@@ -1,2 +1,2 @@
-/root/s1-docs-github/S1UserManual/
+/root/s1-docs-github/r330/
 mkdocs gh-deploy
